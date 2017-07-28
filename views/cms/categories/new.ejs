@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="jumbotron dmcc-jumbo">
+					<h2>Create a new Category</h2>
+				</div>				
+			</div>
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form action="/cms/categories" method="POST">
+							<div class="form-group">
+								<label>Name: </label>
+								<input class="form-control" type="text" name="name" value="" required>
+							</div>
+			    			<div class="form-group">
+			    				<label>URL: </label>
+			    				dmcc.com.ua/
+			    				<input class="form-control" type="text" name="url" value="" required>
+			    			</div>
+			    			<p>Please, pay attention to that URL and Name of category corresponding each other. Usually an <strong>URL is a lower-cased name</strong> of the page.</p>
+			    			<p>An URL must be unique within each domain of the Website. <strong>Do not dublicate URLs</strong> of website pages!</p>
+			    			<div class="form-group">
+			    				<input class="btn btn-primary btn-lg" type="submit" value="Create category" style="float: right;">
+			    			</div>
+						</form>
+						<a class="btn  btn-lg btn-primary-inversed" href="/cms/categories"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>							
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+<% include ../partials/footer %>

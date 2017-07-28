@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron dmcc-jumbo">
+				<h1><%= category.name %></h1>
+				<h4>dmcc.com.ua/<%= category.url %></h4>
+				<h3>There is no descriptions for Categories right now.</h3>
+				<a href="./<%= category._id %>/edit" class="btn btn-primary-inversed">Edit Category properties</a>
+				<form action="/cms/categories/<%= category._id %>?_method=DELETE" method="POST">
+					<button class="btn btn-primary-inversed" type="submit">Delete Category</button>
+				</form>
+			</div>			
+		</div>	
+		<div class="row">
+			<% category.pages.forEach(function(page){ %>
+				<div class="col-lg-6 col-sm-12">
+					<div class="thumbnail">
+						<div class="img-holder-lg" style="background-image: url(<%= page.image %>)"></div>
+						<div class="caption">
+							<h3><%= page.name %></h3>
+							<p><a href="/<%= category.url %>/<%= page.url %>" target="_blank">dmcc.com.ua/<%= category.url %>/<strong><%= page.url %></strong></a></p>
+							<p><%= page.description %></p>
+							<p><a class="btn btn-primary btn-block" role="button" href="/cms/categories/<%= category._id %>/pages/edit?pageIndex=<%= category.pages.indexOf(page) %>">Edit <%= page.name %> page</a></p>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+				<div class="col-lg-6 col-sm-12">
+					<div class="thumbnail">
+						<a href="/cms/categories/<%= category._id %>/pages/new">
+							<div class="img-holder-lg" style="background-image: url(/static/images/add.jpg)"></div>
+						</a>
+						<div class="caption">
+							<h3>Add a new page</h3>
+							<p><a href="/#" target="_blank">dmcc.com.ua/<%= category.url %>/<strong>your_new_page</strong></a></p>
+							<p>Simply add a required page to <%= category.name %> in couple of minutes</p>
+							<p><a class="btn btn-primary btn-block" role="button" href="/cms/categories/<%= category._id %>/pages/new">Create a page</a></p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+<% include ../partials/footer %>

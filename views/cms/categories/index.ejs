@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="jumbotron dmcc-jumbo">
+					<h2>Categories & Pages List</h2>
+					<p>Here you can create, modify or delete any categories of website pages. To create a plain page, please select or create a category first.</p>
+					<a class="btn btn-primary-inversed" href="/cms/categories/new">Add a New Category</a>
+				</div>		
+			</div>
+		</div>
+		<div class="row">
+			<% categories.forEach(function(category){ %>
+				<div class="col-md-4 col-sm-12">
+					<div class="thumbnail">
+						<div class="img-holder-sm" style="background-image: url(<%= category.pages[0].image %>) ">
+						</div>
+						<div class="caption">
+							<h3><%= category.name %></h3>
+							<p>There is no descriptions for Categories right now.</p>
+							<p>Pages total: <strong><%= category.pages.length %></strong></p>
+							<p><a class="btn btn-primary btn-block" role="button" href="/cms/categories/<%= category._id %>">Go to <%=category.name %></a></p>						
+						</div>
+					</div>
+				</div>				
+			<% }); %>
+		</div>
+	</div>
+
+<% include ../partials/footer %>

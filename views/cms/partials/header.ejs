@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CMS DMCC</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+            <link rel="stylesheet" type="text/css" href="/static/css/cms.css">
+            <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a  class="navbar-brand" href="/cms">
+                        <img src="/static/images/dmcc_logo.svg">
+                        <p>Content Management System</p>
+                    </a>
+                </div>
+                <div id="myNavbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if(!currentUser){ %>
+                            <li><a href="/cms/login">Login</a></li>
+                        <% } else { %>
+                            <li><a href="#">Signed in as <%= currentUser.username %></a></li>
+                            <li><a href="/cms/logout">Logout <i class="glyphicon glyphicon-off"></i></a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
