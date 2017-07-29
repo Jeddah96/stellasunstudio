@@ -33,10 +33,7 @@ passport.deserializeUser(User.deserializeUser());
 // --- Dynamic EJS-render data --- // 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
-    Category.find({}, function(err, result){
-        res.locals.header = result;
-        next();
-    })
+    next();
 });
 
 // --- Routings --- //

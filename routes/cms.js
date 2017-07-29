@@ -2,8 +2,7 @@ var express = require('express');
     router  = express.Router(),
     fs       = require('fs'),
     passport = require('passport'),
-    middleware = require("../middleware"),
-    Category = require("../models/category");
+    middleware = require("../middleware");
 
 
 
