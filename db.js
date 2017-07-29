@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
+
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1/stellasunstudio');
+var promise = mongoose.connect('mongodb://127.0.0.1/stellasunstudio', {
+  useMongoClient: true
+});
 
 module.exports = mongoose;
