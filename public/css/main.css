@@ -11,12 +11,17 @@
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
   @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
   @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600');
+  @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+  @import url('https://fonts.googleapis.com/css?family=Satisfy');
+  @import url('https://fonts.googleapis.com/css?family=BenchNine:700');
+  @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:600');
 
   body {
     background: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 22px;
     color: #000;
   }
@@ -112,6 +117,7 @@
 
   .inline{
     display: inline-block;
+    width: 2000px;
   }
 
   .padding{
@@ -160,30 +166,46 @@
     background: rgba(210, 153, 72, 0.7);
   }
 
-#landpg {
-  height: 220px;
-  width: 220px;
 
+
+/*404*/
+
+#e404 {
+  width: 250px;
+  height: 250px;
 }
 
-#landpgg {
-  height: 220px;
-  width: 220px;
-
+#page-not-found {
+  margin-top: -15px;
+  color: #1a729d;
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-#imagine {
-font-size: 60px;
-padding-left: 90px;
-padding-top: 50px;
+#return-description {
 
+  color: black;
+  font-size: 30px;
+  font-family: 'Satisfy', cursive;
+  line-height: 2;
 }
 
-#leaf {
-padding-left: 160px;
-padding-bottom: 90px;
-
+#return {
+  color: black;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: -10px;
 }
+
+.bg-404 {
+  margin-top: -50px;
+}
+
+.bg-about {
+  margin-top: -90px;
+}
+
+
 
 
 
@@ -191,124 +213,14 @@ padding-bottom: 90px;
 *******Header******
 **************************/
 
-
-#header{
-  margin-bottom: 0;
-
-}
-
-#header .navbar-inverse .container{
-  position: relative;
-}
-
-.search{
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.search i{
-  color: #00aeef;
-  cursor: pointer;
-  position: absolute;
-  right: 320px;
-  top: 20px;
-}
-
-.field-toggle{
-  position: relative;
-  top: 80px;
-  right: 350px;
-  display: none;
-  height: 50px;
-}
-
-.search-form{
-  padding-left: 5px;
-  height: 20px;
-  font-size: 14px;
-  color: #818285;
-  font-weight: 300;
-  outline: none;
-  border: 1px solid #00aeef;
-  margin-top: 22px;
-  border-radius: 4px;
-}
-
-.social-icons ul li{
-  padding: 0px 0px;
-
-}
-
-#connect-us {
-  text-align: center;
-}
-
-.social-icons ul li:last-child{
-  padding-right: 490px;
-  padding-bottom: 40px;
-
-}
-
-.social-icons ul li a{
-  font-size: 30px;
-  color: #d3d3d3;
-
-}
-
-.social-icons ul li a:hover .fa-facebook {
-  color:#0884d5;
-}
-
-.social-icons ul li a:hover .fa-instagram {
-  color:#2AA7DC;
-}
-
-.social-icons ul li a:hover .fa-pinterest {
-  color:#A22523;
-}
-
-
-.social-icons ul li a:hover,
-.social-icons ul li a:focus{  
-  background: none;
-}
-
-#header .navbar {
-  background: #fff;
-  border: 0;
-  margin-bottom: 0;
-}
-
-#header .navbar-toggle{
-  margin-top: 0px;
-}
-
-#header .navbar-brand{
-  padding: 20px;
-  margin-left: 0px;
-}
-
-#header .navbar-brand h1{
-  padding-top: 0px;
-  margin: 0;
-}
-
-#header .navbar-nav.navbar-right >li:last-child{
-  margin-right: 20px;
-}
-
-
-
 @media screen and (min-width:768px){
     .navbar-brand-centered {
-    	font-family: 'Josefin Sans', sans-serif;
-  		font-size: 17px;
         position: absolute;
         left: 50%;
-        width: 160px;
+        display: block;
+        width: 60px;
         text-align: center;
+        padding-bottom: 10px;
     }
     .navbar>.container .navbar-brand-centered, 
     .navbar>.container-fluid .navbar-brand-centered {
@@ -316,9 +228,38 @@ padding-bottom: 90px;
     }
 }
 
-.main-logo{
-	padding: 35px;
+#mheader {
+  padding-bottom: 8px;
 }
+
+#m-logo {
+  margin-top: -22px
+}
+
+.navbar-default {
+  background: white;
+  padding: 20px;
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+
+
+.navbar-default li a:hover{
+  color: #0884d5;
+  background: none;
+}
+
+#header{
+  margin-bottom: 0;
+  padding: 30px 0 60px 0;
+}
+
+#header .navbar-inverse .container{
+  position: relative;
+}
+
 
 
 #header .navbar-inverse .navbar-nav  li.active > a,  
@@ -334,93 +275,161 @@ padding-bottom: 90px;
   color: #00aeef;
 }
 
-/*  Dropdown menu*/
+#happy-clients {
+  font-size: 46px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+}
 
-ul.sub-menu {
-  display: none;
-  list-style: none;
+#happy-cl {
+  padding-top: 60px;
+}
+
+#clientss {
+  display: inline-block;
+}
+
+.art-life-name {
+  font-size: 35px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+  text-align: center;
+}
+
+#art-life {
+  margin-left: -14px;
+  width: 600px;
+  
+}
+
+#art-life-des {
+  font-size: 30px;
+  font-family: 'Shadows Into Light Two', cursive;
+  src: url(/static/fonts/verdana.ttf);
+  text-align: justify;
+  text-indent: 0.5em;
+  line-height: 1.5;
+}
+
+.stella-m {
+  font-size: 35px;
+  font-family: 'Satisfy', cursive;
+  color: #1a729d;
+}
+
+#sm-signature {
+  display: inline-flex;
+  width: 100%
+}
+
+#leaf {
+  padding-left: 30px;
+}
+
+#art-box {
+  position: inherit;
+}
+
+.services-three {
+  font-size: 35px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+}
+
+#min-portfolio {
+  padding-bottom: 80px;
+}
+
+#carousel1 {
+  margin-top: 90px;
+}
+
+.carousel-column {
   padding: 0;
-  margin: 0;
 }
 
-#header .navbar-nav li ul.sub-menu li a{
-  color: #818285;
-  padding: 5px 0;
-  font-size: 15px;
-  display: block;
-  text-transform: capitalize;
+
+.landing-tile-h2 {
+  font-size: 40px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #fff4e8;
+  padding-top: 30px;
 }
 
-#header .navbar-nav li ul.sub-menu li .active{
-  background: #00aeef;
-  color: #fff;
-  position: relative;
-}
+.landing-tile-h3 {
+  font-size: 40px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #fff4e8;
+  padding-top: 100px;
 
-#header .navbar-nav li ul.sub-menu li .active i{
-  position: absolute;
-  font-size: 56px;
-  top: -13px;
-  color: #0884d5;
-}
-
-#header .navbar-nav li ul.sub-menu li .active .fa-angle-right{
-  left: -3px;
-}
-
-#header .navbar-nav li ul.sub-menu li .active .fa-angle-left{
-  right: -3px;
-}
-
-#header .navbar-nav li ul.sub-menu li a:hover,
-#header .navbar-nav li ul.sub-menu li a:focus{
-  background: #00aeef;
-  color: #fff;
-}
-
-.fa-angle-down{
-  padding-left: 5px; 
-}
-
-.scaleIn {
-  -webkit-animation-name: scaleIn;
-  animation-name: scaleIn;
-}
-
-@-webkit-keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
 }
 
 
 /*************************
 *******Footer******
 **************************/
+.copyright {
+  font-size: 15px;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #4c4c4c;
+  line-height: 1.5;
+  margin-top: -140px;
+  margin-bottom: 250px;
+}
+
+#author {
+  color: #1da1f2;
+}
+
+#connectify {
+  text-align: center;
+  display: inline-block;
+  font-size: 55px;
+  color: #d3d3d3;
+}
+
+#connectify ul li{
+  padding: 0px 20px;
+
+}
+
+#connectify .fa-facebook {
+  color: #3b5998;
+}
+
+#connectify .fa-twitter {
+  color: #1da1f2;
+}
+
+#connectify .fa-instagram {
+  color: #ce2589;
+}
+
+#connectify .fa-pinterest {
+  color: #bd081c;
+}
+
+#connectify .fa-youtube {
+  color: #e62117;
+}
+
+#pills {
+  display: inline-block;
+  margin-bottom: 150px;
+}
+
+#connect-us {
+  font-size: 46px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+}
+
 
 #footer {
   padding-bottom: 10px;
@@ -505,7 +514,7 @@ ul.sub-menu {
 }
 
 .contact-info.bottom {
-  padding-left: 25px;
+  padding: auto;
 }
 
 .bottom > address {
@@ -781,6 +790,39 @@ ul.sub-menu {
 *******About Us Page******
 **************************/
 
+#aboutus {
+  font-size: 40px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+}
+
+#aboutus1 {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Satisfy', cursive;
+  src: url(/static/fonts/antonio.ttf);
+  color: #1a729d;
+}
+
+#aboutus2 {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Satisfy', cursive;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #4c4c4c;
+  line-height: 1.5;
+}
+
+#counter {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Satisfy', cursive;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #4c4c4c;
+  line-height: 1.5;
+}
+
 #action , 
 #page-breadcrumb{
   position: relative;
@@ -811,7 +853,7 @@ ul.sub-menu {
 }
 
 .single-service img {
-  height: 85px;
+  height: 175px;
 }
 
 .tour-button {
@@ -1075,7 +1117,7 @@ ul.elements li > i{
   position: absolute;
   top: 0;
   height: 100%;
-  background:rgba(112, 35, 64, 0.9);
+  background:rgba(255, 204, 0, 0.7);
   width: 100%;
   text-align: center;
 }
@@ -1495,27 +1537,6 @@ Portfolio Details
   margin-top: 10px;
 }
 
-.navbar-default {
-  background: none;
-  padding: 0;
-}
-
-.navbar-default li a{
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 22px;
-  padding: 45px;
-  padding-top: 70px;
-  padding-right: 15px;
-}
-
-.navbar-default li a i{
-  padding-right: 8px;
-}
-
-.navbar-default li a:hover{
-  color: #0884d5;
-  background: none;
-}
 
 .skills .navbar-default,
 .client .navbar-default{
@@ -2359,16 +2380,7 @@ span.stButton_gradient,
 ********404 page CSS******
 **************************/
 
-#error-page {
-  display: table;
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
-  color: #686868;
-  font-size: 18px;
-  font-weight: 300;
-  padding: 100px 0;
-}
+
 
 #error-page .container-fluid {
   overflow: hidden;
@@ -2379,11 +2391,6 @@ span.stButton_gradient,
   vertical-align: middle;
 }
 
-.bg-404 {
-  background-image: url("../images/home/tour-bg.png");
-  background-repeat: repeat-x;
-  background-position: center top;
-}
 
 .error-image {
   display: inline-block;
@@ -2458,7 +2465,7 @@ span.stButton_gradient,
   color: #686868;
   font-size: 18px;
   font-weight: 300;
-  padding: 100px 0;
+  
 }
 
 #error-page .container-fluid {
@@ -2470,11 +2477,6 @@ span.stButton_gradient,
   vertical-align: middle;
 }
 
-.bg-404 {
-  background-image: url("../images/404-bg.png");
-  background-repeat: repeat-x;
-  background-position: center top;
-}
 
 .error-image {
   display: inline-block;
